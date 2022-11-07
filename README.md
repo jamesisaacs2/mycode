@@ -1,6 +1,6 @@
 # mycode (Project Title)
 
-Code as part of Alta3 Python training.
+Code as part of Alta3 Python training. With a minor edit.
 
 ## Purpose
 
