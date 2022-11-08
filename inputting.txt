@@ -1,0 +1,3 @@
+x = int(input("Pick a number 1-10")) 
+
+print("Your number plus three equals: ", x + 3)
