@@ -1,4 +1,4 @@
-question_data = [
+questions = [
     {"text": "A snail's blood is green.", "answer": "True"},
     {"text": "The loudest animal is the Asian Elephant.", "answer": "False"},
     {"text": "Approximately 25% of human bones are in the feet.", "answer": "True"},

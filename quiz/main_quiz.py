@@ -7,12 +7,12 @@
 # ROUGH minimum of 40 lines of code... if code is spread out across multiple files, they are cumulative."""
 
 from question_model import Question
-from test_data import question_data
+from sample_data import questions
 from quiz_engine import QuizEngine
 
 # make question list
 question_bank = []
-for question in question_data:
+for question in questions:
     question_text = question["text"]
     question_answer = question["answer"]
     new_question = Question(question_text, question_answer)
