@@ -1,0 +1,16 @@
+[
+  {
+    "device": "ciscoiosxr",
+    "serial": "C9878-323F",
+    "ip": "10.3.3.1",
+    "region": "west",
+    "firmware": "v1.2"
+  },
+  {
+    "device": "ciscoiosxr",
+    "serial": "C7673-664E",
+    "ip": "10.66.7.1",
+    "region": "north",
+    "firmware": "v1.2"
+  }
+]
