@@ -1,0 +1,8 @@
+device,serial,ip,region,firmware
+ciscoios,C8293-928F,192.168.70.1,northeast,v14.6
+ciscoiosxr,A7392-123D,10.0.0.1,northeast,v1.2
+ciscoiosxe,C8233-593A,172.6.2.11,southwest,v3.2
+cisconxos,B1122-938A,172.4.2.11,south,v1.2
+ciscoios,C2832-23dB,192.168.102.1,west,v14.6
+ciscoiosxr,C9878-323F,10.3.3.1,west,v1.2
+ciscoiosxr,C7673-664E,10.66.7.1,north,v1.2
