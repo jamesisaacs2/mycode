@@ -1,0 +1,29 @@
+!=== {{ switchname }} ===!
+
+!--- IOS config ---!
+enable
+configure terminal
+hostname {{ switchname }}
+
+!--- MGMT ---!
+username {{ username }} secret alta3
+ip route 0.0.0.0 0.0.0.0 {{ defaultgateway }}
+interface Management 1
+ip address {{ switchIP }} {{ netmask }}
+mtu {{ mtusize }}
+exit
+
+!--- SSH ---!
+management ssh
+  idle-timeout 0
+  authentication mode keyboard-interactive
+  server-port 22
+  no fips restrictions
+  no hostkey client strict-checking
+  no shutdown
+  login timeout 120
+  log-level info
+exit
+exit
+write memory
+
