@@ -57,7 +57,7 @@ def new_entry():
 # if someone uses new.html it will generate a POST
 # this post will be sent to /new
 # where the information will be added to the sqliteDB
-@app.route('/add', methods=['POST'])
+@app.route('/new', methods=['POST'])
 def add_new():
     try:
         nm = request.form['nm']  # name
