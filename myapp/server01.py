@@ -18,12 +18,12 @@ app = Flask(__name__)
 def home():
     return render_template('home.html')
 
-# return student.html (a way to add a student to our sqliteDB)
+# return new.html (a way to add a student to our sqliteDB)
 @app.route('/enternew')
 def new_student():
-    return render_template('student.html')
+    return render_template('new.html')
 
-# if someone uses student.html it will generate a POST
+# if someone uses new.html it will generate a POST
 # this post will be sent to /addrec
 # where the information will be added to the sqliteDB
 @app.route('/addrec',methods = ['POST'])
@@ -52,7 +52,7 @@ def addrec():
 
     finally:
         # con.close()     # successful or not, close the connection to sqliteDB
-        return render_template("result.html",msg = msg)    #
+        return render_template("resultadd.html",msg = msg)    #
 
 # return all entries from our sqliteDB as HTML
 @app.route('/list')
@@ -64,7 +64,7 @@ def list_students():
     cur.execute("SELECT * from students")           # pull all information from the table "students"
     
     rows = cur.fetchall()
-    return render_template("list.html",rows = rows) # return all of the sqliteDB info as HTML
+    return render_template("view.html",rows = rows) # return all of the sqliteDB info as HTML
 
 # use a HTTP DELETE to remove an entry from the table
 @app.route('/remove', methods = ['DELETE'])
@@ -97,7 +97,7 @@ def remove():
     except:
         msg = "error in removing the record"
     finally:
-        return render_template("result.html",msg = msg) # return success
+        return render_template("resultadd.html",msg = msg) # return success
 
 
 if __name__ == '__main__':
