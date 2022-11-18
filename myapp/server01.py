@@ -18,12 +18,12 @@ app = Flask(__name__)
 def home():
     return render_template('home.html')
 
-# return new.html (a way to add a student to our sqliteDB)
+# return person.html (a way to add a student to our sqliteDB)
 @app.route('/enternew')
 def new_student():
-    return render_template('new.html')
+    return render_template('person.html')
 
-# if someone uses new.html it will generate a POST
+# if someone uses person.html it will generate a POST
 # this post will be sent to /addrec
 # where the information will be added to the sqliteDB
 @app.route('/addrec',methods = ['POST'])

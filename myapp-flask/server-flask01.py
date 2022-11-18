@@ -48,16 +48,16 @@ def home():
     return render_template('home.html')
 
 
-# return new.html (to add an entry to DB)
+# return person.html (to add an entry to DB)
 @app.route('/new')
 def new_entry():
-    return render_template('new.html')
+    return render_template('person.html')
 
 
-# if someone uses new.html it will generate a POST
+# if someone uses person.html it will generate a POST
 # this post will be sent to /new
 # where the information will be added to the sqliteDB
-@app.route('/new', methods=['POST'])
+@app.route('/add', methods=['POST'])
 def add_new():
     try:
         nm = request.form['nm']  # name
